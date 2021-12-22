@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Flex, Heading, Button } from '@pancakeswap/uikit'
+import { Flex, Heading, Button, DemonButton } from '@demonswap/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { useTranslation } from 'contexts/Localization'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -94,9 +94,9 @@ const Hero = () => {
 
   return (
     <>
-      <BgWrapper>
+      {/* <BgWrapper>
         <InnerWrapper>{theme.isDark ? <SlideSvgDark width="100%" /> : <SlideSvgLight width="100%" />}</InnerWrapper>
-      </BgWrapper>
+      </BgWrapper> */}
       <Flex
         position="relative"
         flexDirection={['column-reverse', null, null, 'row']}
@@ -107,19 +107,19 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+            {t('The Portal Has Been Opened')}
           </Heading>
-          <Heading scale="md" mb="24px">
+          {/* <Heading scale="md" mb="24px">
             {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
-          </Heading>
+          </Heading> */}
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
             <Link to="/swap">
-              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
+              <DemonButton variant={!account ? 'secondary' : 'primary'}>{t('ENTER HELL')}</DemonButton>
             </Link>
           </Flex>
         </Flex>
-        <Flex
+        {/* <Flex
           height={['192px', null, null, '100%']}
           width={['192px', null, null, '100%']}
           flex={[null, null, null, '1']}
@@ -132,7 +132,7 @@ const Hero = () => {
           <StarsWrapper>
             <CompositeImage {...starsImage} />
           </StarsWrapper>
-        </Flex>
+        </Flex> */}
       </Flex>
     </>
   )

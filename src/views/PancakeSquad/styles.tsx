@@ -1,4 +1,4 @@
-import { Box, Flex } from '@pancakeswap/uikit'
+import { Box, Flex } from '@demonswap/uikit'
 import styled from 'styled-components'
 
 export const StyledSquadContainer = styled(Box)`
