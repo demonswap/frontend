@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Flex, Heading, Button, DemonButton } from '@demonswap/uikit'
+import { Flex, Heading, Button } from '@demonswap/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { useTranslation } from 'contexts/Localization'
 import ConnectWalletButton from 'components/ConnectWalletButton'
@@ -115,7 +115,7 @@ const Hero = () => {
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
             <Link to="/swap">
-              <DemonButton variant={!account ? 'secondary' : 'primary'}>{t('ENTER HELL')}</DemonButton>
+              <Button variant={!account ? 'secondary' : 'primary'}>{t('ENTER HELL')}</Button>
             </Link>
           </Flex>
         </Flex>
